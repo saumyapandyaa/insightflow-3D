@@ -2,7 +2,7 @@
 
 AI-powered 3D repository visualization platform with offline LLM reasoning.
 
-> Status: Active development. Core prototype implemented. Architecture evolving.
+> Status: Active development
 
 ---
 
