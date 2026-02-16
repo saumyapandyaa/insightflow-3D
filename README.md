@@ -6,7 +6,7 @@ AI-powered 3D repository visualization platform with offline LLM reasoning.
 
 ---
 
-## 🚀 Why InsightFlow Exists
+##  Why InsightFlow Exists
 
 Understanding large codebases is difficult, especially for new contributors.  
 InsightFlow transforms a repository into an interactive 3D “code city” to improve architectural comprehension, dependency tracing, and onboarding speed.
@@ -15,7 +15,7 @@ Instead of scanning thousands of lines of code, developers explore structure vis
 
 ---
 
-## 🏗 System Architecture
+##  System Architecture
 
 ```mermaid
 flowchart TD
@@ -31,12 +31,12 @@ E --> F[Query Interface]
 
 ## Core Components
 
-### 1️⃣ Repository Ingestion
+### 1️. Repository Ingestion
 - Filesystem + Git access  
 - Directory → File → Function normalization  
 - Language-agnostic structure mapping  
 
-### 2️⃣ Static Code Analysis
+### 2️. Static Code Analysis
 - TypeScript Compiler API  
 - Babel parser  
 - Python AST  
@@ -46,13 +46,13 @@ E --> F[Query Interface]
   - Call relationships
   - Structural complexity metrics
 
-### 3️⃣ 3D Visualization Engine
+### 3️. 3D Visualization Engine
 - React + Three.js + React-Three-Fiber  
 - Directories → districts  
 - Files → buildings (height = complexity)  
 - Functions → animated entities  
 
-### 4️⃣ Offline AI Reasoning
+### 4️. Offline AI Reasoning
 - Ollama local models (Llama3, Mistral, Phi-3)  
 - Repo-aware explanations  
 - Dependency tracing  
@@ -61,7 +61,7 @@ E --> F[Query Interface]
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 Frontend:
 - React
@@ -79,7 +79,7 @@ AI:
 
 ---
 
-## 🧠 Design Principles
+##  Design Principles
 
 - Privacy-first (no cloud dependency)
 - Architecture-first visualization
@@ -88,13 +88,14 @@ AI:
 
 ---
 
-## 🛠 Running Locally
+##  Running Locally
 
+```
 npm install  
 npm run dev  
-
+```
 ---
 
-## 💡 Project Goal
+##  Project Goal
 
 InsightFlow explores how visualization + AI can fundamentally change how developers interact with large systems by combining static analysis, graphics rendering, and local LLM reasoning into a unified developer experience.
