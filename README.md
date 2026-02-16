@@ -1,31 +1,100 @@
-# InsightFlow 3D (Work in Progress)
+# InsightFlow 3D
 
-> ⚠️ **Project Status:** Actively in development.  
-> The full codebase is being refined locally and will be pushed in upcoming updates.
+AI-powered 3D repository visualization platform with offline LLM reasoning.
 
-InsightFlow 3D is an open-source AI-powered code-intelligence tool that transforms any repository into an interactive, city-themed 3D visual model. Directories appear as districts, files as buildings, and functions as animated agents—making large codebases easier to break down and understand visually.
-
-The platform uses:
-- **React, Vite, Three.js, React-Three-Fiber, Zustand** for the 3D interface  
-- **AST analysis** to extract structure, behavior, and complexity  
-- **MCP tools** (Git, Filesystem, Analyzer) for repo access  
-- **Ollama local LLMs** for offline, privacy-preserving reasoning and explanations  
-
-InsightFlow 3D aims to help engineers explore architecture, follow dependencies, understand behavior, and navigate unfamiliar codebases with far more clarity.
+> Status: Active development. Core prototype implemented. Architecture evolving.
 
 ---
 
-## 🚧 Project Roadmap *(subject to change as the project evolves)*
-- [ ] Push initial working prototype  
-- [ ] 3D scene generation for directories/files/functions  
-- [ ] AST → JSON pipeline integration  
-- [ ] MCP + Ollama offline reasoning  
-- [ ] Interactive UI overlays and scene controls  
-- [ ] Visualization polish and UX refinement  
-- [ ] Demo video, documentation, and examples  
+## 🚀 Why InsightFlow Exists
+
+Understanding large codebases is difficult, especially for new contributors.  
+InsightFlow transforms a repository into an interactive 3D “code city” to improve architectural comprehension, dependency tracing, and onboarding speed.
+
+Instead of scanning thousands of lines of code, developers explore structure visually and query behavior using local AI models — fully offline.
 
 ---
 
-## 📬 Stay Tuned
-Full source code, docs, and examples will be published soon.  
-Feel free to **star ⭐ the repo** to follow progress!
+## 🏗 System Architecture
+
+```mermaid
+flowchart TD
+A[Repository] --> B[AST Parsing Layer]
+B --> C[Graph Model Generator]
+C --> D[3D Rendering Engine]
+C --> E[LLM Reasoning Layer]
+E --> F[Query Interface]
+```
+
+
+---
+
+## Core Components
+
+### 1️⃣ Repository Ingestion
+- Filesystem + Git access  
+- Directory → File → Function normalization  
+- Language-agnostic structure mapping  
+
+### 2️⃣ Static Code Analysis
+- TypeScript Compiler API  
+- Babel parser  
+- Python AST  
+- Extracted metadata:
+  - Directory hierarchy
+  - Function definitions
+  - Call relationships
+  - Structural complexity metrics
+
+### 3️⃣ 3D Visualization Engine
+- React + Three.js + React-Three-Fiber  
+- Directories → districts  
+- Files → buildings (height = complexity)  
+- Functions → animated entities  
+
+### 4️⃣ Offline AI Reasoning
+- Ollama local models (Llama3, Mistral, Phi-3)  
+- Repo-aware explanations  
+- Dependency tracing  
+- Risk identification  
+- Fully privacy-preserving  
+
+---
+
+## ⚙️ Tech Stack
+
+Frontend:
+- React
+- Vite
+- Three.js
+- React-Three-Fiber
+- Zustand
+
+Analysis:
+- AST parsing (TypeScript, Babel, Python)
+- Model Context Protocol (MCP)
+
+AI:
+- Ollama (local inference)
+
+---
+
+## 🧠 Design Principles
+
+- Privacy-first (no cloud dependency)
+- Architecture-first visualization
+- Offline AI reasoning
+- Developer onboarding acceleration
+
+---
+
+## 🛠 Running Locally
+
+npm install  
+npm run dev  
+
+---
+
+## 💡 Project Goal
+
+InsightFlow explores how visualization + AI can fundamentally change how developers interact with large systems by combining static analysis, graphics rendering, and local LLM reasoning into a unified developer experience.
